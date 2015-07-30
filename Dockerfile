@@ -1,8 +1,9 @@
 FROM ubuntu:14.04
 MAINTAINER Yannick Warnier <ywarnier@chamilo.org>
 
-RUN mkdir /var/www
+RUN mkdir -p /var/www
 
 VOLUME ["/var/www"]
 
-ENTRYPOINT ["/bin/bash"]
+EXPOSE 22 80
+CMD ["/bin/bash"]
